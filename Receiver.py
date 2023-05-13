@@ -58,12 +58,5 @@ except SystemExit:
 except:
     print("Warning Data Has Been Currupted!")
     sys.exit(1)
-# Print the current working directory
-print(os.getcwd())
 
-# Move back one directory
-os.chdir("..")
-
-# Print the new current working directory
-print(os.getcwd())
 
