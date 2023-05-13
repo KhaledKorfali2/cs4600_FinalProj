@@ -9,6 +9,9 @@ import os
 import sys
 from Crypto.PublicKey import RSA
 
+#Define the name of the main director folder
+main_dir = os.getcwd()
+
 # Define the name of the subdirectory to read
 sender_dir = "Sender"
 sender_keys_dir = "Sender_Keys"
@@ -21,10 +24,6 @@ subdir_path_sender_keys = os.path.join(subdir_path_sender, sender_keys_dir)
 
 # Check if the subdirectory exists
 if os.path.isdir(subdir_path_sender):
-    # # If the subdirectory exists, print its contents
-    # print(f"Contents of {subdir_path_sender}:")
-    # for file_name in os.listdir(subdir_path_sender):
-    #     print(file_name)
     # Check if the subdirectory exists
     os.chdir(subdir_path_sender)
     if os.path.isdir(subdir_path_sender_keys):
@@ -42,8 +41,9 @@ else:
     # If the subdirectory does not exist, print an error message
     print(f"Error: {subdir_path_sender} directory does not exist.")
 
-os.chdir("..")
-os.chdir("..")
+#Go back to main directory folder
+os.chdir(main_dir)
+
 
 # Define the name of the subdirectory to read
 receiver_dir = "Receiver"
@@ -57,10 +57,6 @@ subdir_path_receiver_keys = os.path.join(subdir_path_receiver, receiver_keys_dir
 
 # Check if the subdirectory exists
 if os.path.isdir(subdir_path_receiver):
-    # # If the subdirectory exists, print its contents
-    # print(f"Contents of {subdir_path_receiver}:")
-    # for file_name in os.listdir(subdir_path_receiver):
-    #     print(file_name)
     # Check if the subdirectory exists
     os.chdir(subdir_path_receiver)
     if os.path.isdir(subdir_path_receiver_keys):
