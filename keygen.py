@@ -33,10 +33,14 @@ subdir_path_sender_keys = os.path.join(subdir_path_sender, sender_keys_dir)
 # Check if the subdirectory does not exist
 if not os.path.isdir(subdir_path_sender):
     os.mkdir(subdir_path_sender)
-    os.chdir(subdir_path_sender)
+os.chdir(subdir_path_sender)
+
+with open("message.txt", "w") as f:
+    f.write("Enter Message Here")
+
 if not os.path.isdir(subdir_path_sender_keys):
     os.mkdir(subdir_path_sender_keys)
-    os.chdir(subdir_path_sender_keys)
+os.chdir(subdir_path_sender_keys)
     
 with open("sender_private_key.pem", "wb") as f:
     f.write(sender_key.export_key())
@@ -44,7 +48,6 @@ with open("sender_public_key.pem", "wb") as f:
     f.write(sender_key.publickey().export_key())
 with open("receiver_public_key.pem", "wb") as f:
     f.write(receiver_key.publickey().export_key())
-
 
 #Go back to main directory folder
 os.chdir(main_dir)
@@ -65,10 +68,11 @@ subdir_path_receiver_keys = os.path.join(subdir_path_receiver, receiver_keys_dir
 # Check if the subdirectory does not exist
 if not os.path.isdir(subdir_path_receiver):
     os.mkdir(subdir_path_receiver)
-    os.chdir(subdir_path_receiver)
+os.chdir(subdir_path_receiver)
+
 if not os.path.isdir(subdir_path_receiver_keys):
     os.mkdir(subdir_path_receiver_keys)
-    os.chdir(subdir_path_receiver_keys)
+os.chdir(subdir_path_receiver_keys)
     
 with open("receiver_private_key.pem", "wb") as f:
     f.write(receiver_key.export_key())
