@@ -36,7 +36,8 @@ if not os.path.isdir(subdir_path_sender):
 os.chdir(subdir_path_sender)
 
 with open("message.txt", "w") as f:
-    f.write("Enter Message Here")
+    f.write("This is the defualt message created after generating keys.\n" + 
+            "If you want to customize the message go to cs4600_FinalProj\\Senders\\message.txt.")
 
 if not os.path.isdir(subdir_path_sender_keys):
     os.mkdir(subdir_path_sender_keys)
@@ -81,5 +82,5 @@ with open("receiver_public_key.pem", "wb") as f:
 with open("sender_public_key.pem", "wb") as f:
     f.write(sender_key.publickey().export_key())
 
-print("RSA Keys Generated!!!")
+print("RSA Keys Generated!")
 sys.exit(0)
