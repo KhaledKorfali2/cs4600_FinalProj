@@ -81,7 +81,7 @@ if os.path.isdir(subdir_path_receiver_keys):
         with open('received_message.txt', 'wb') as f:
             f.write(plaintext)
         
-        print("Message received and saved to file!")
+        print("Message received and saved to file received_message.txt!")
         sys.exit(0)
     except SystemExit:
         pass  # ignore the SystemExit exception and continue executing

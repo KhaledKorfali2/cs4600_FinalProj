@@ -80,7 +80,7 @@ if os.path.isdir(subdir_path_sender_keys):
         f.write(hmac)
         #print(hmac.__len__())
     
-    print("Message sent!!!")
+    print("Message sent!")
     sys.exit(0)
 else:
     print("Error No Directory {subdir_path_sender}")
