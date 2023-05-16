@@ -1,2 +1,1 @@
-This is the defualt message created after generating keys.
-If you want to customize the message go to cs4600_FinalProj\Senders\message.txt.
+This is a top secret.
