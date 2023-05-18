@@ -38,7 +38,7 @@ os.chdir(subdir_path_sender) # Change the current working directory to the sende
 # Create a message file in the sender's subdirectory
 with open("message.txt", "w") as f:
     f.write("This is the defualt message created after generating keys.\n" + 
-            "If you want to customize the message go to cs4600_FinalProj\\Senders\\message.txt.")
+            f"If you want to customize the message go to {main_dir}\\Senders\\message.txt.")
 
 # Check if the subdirectory for the sender keys does not exist
 if not os.path.isdir(subdir_path_sender_keys): 

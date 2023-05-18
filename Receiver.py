@@ -83,7 +83,7 @@ if os.path.isdir(subdir_path_receiver_keys):
             f.write(plaintext)
         
         # Indicate successful execution of program
-        print("Message received and saved to location cs4600_FinalProj\\Receiver\\received_message.txt!")
+        print(f"Message received and saved to location {main_dir}\\Receiver\\received_message.txt!")
         sys.exit(0)
     except SystemExit:
         pass  # Ignore the SystemExit exception and continue executing
